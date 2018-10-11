@@ -31,8 +31,8 @@ public class SpringDemo1 {
     public void demo3(){
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
         food fd=(food) applicationContext.getBean("food");
+        String result = fd.runStart();
 
-
-
+        System.out.println(result);
     }
 }

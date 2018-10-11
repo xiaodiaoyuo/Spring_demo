@@ -9,14 +9,8 @@ public class Foodimpl implements food{
     private String taste;
     private String kind;
 
-    public String runStart(){
-       return  this.toString();
-    }
 
 
-    public String toString(){
-        return this.getName()+"属于"+this.getKind()+",口味"+this.getTaste();
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -41,4 +35,14 @@ public class Foodimpl implements food{
     public String getKind() {
         return kind;
     }
+
+    public String toString(){
+        return this.getName()+"属于"+this.getKind()+",口味"+this.getTaste();
+    }
+    public String runStart(){
+        return  this.toString();
+    }
+
+
+
 }
