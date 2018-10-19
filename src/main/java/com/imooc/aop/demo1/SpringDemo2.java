@@ -21,7 +21,7 @@ public class SpringDemo2 {
     @Test
     public  void demo2(){
         UserDao userDao=new UserDaoImp();
-      UserDao proxy=(UserDao) new MyJdkProxy(userDao).createProxy();
+        UserDao proxy=(UserDao) new MyJdkProxy(userDao).createProxy();
         proxy.update();
         proxy.save();
         proxy.delete();
