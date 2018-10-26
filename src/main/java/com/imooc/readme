@@ -1,7 +1,11 @@
-1.JDK动态代理和CGLIB代理最大的区别：
+1.demo1和demo2测试代码功能
+JDK动态代理和CGLIB代理最大的区别：
 JDK动态代理必须实现业务类
 对于不使用接口的业务类，无法使用JDK动态代理
 CGLIB采用底层字节码技术，可以为一个类创建子类，解决无接口代理问题
 简单理解：
 demo1中使用UserDao接口，可以使用JDK动态代理
 demo2中无接口，使用CGlib生成代理
+
+2.bean
+property中optimize设置为true，强制使用CGLIB

@@ -7,10 +7,28 @@
     <property name="name" value="李四"/>
     <property name="idno" value="李四"/>
 </bean>
-
     <bean id="food" class="com.imooc.ioc.demo1.Foodimpl">
         <property name="name" value="食品名称"/>
         <property name="taste" value="口味"/>
         <property name="kind" value="种类"/>
     </bean>
+
+    <!--配置目标类-->
+    <bean id="studentDao" class="com.imooc.aop.demo3.StudentDaoImp"/>
+
+    <!--前置通知类型-->
+    <bean id="MyAdvice" class="com.imooc.aop.demo3.MyAdvice"></bean>
+
+    <!--AOP产生代理对象-->
+    <bean id="studentDaoProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <!--配置目标类-->
+        <property name="target" ref="studentDao"></property>
+        <!--实现的接口-->
+        <property name="proxyInterfaces" value="com.imooc.aop.demo3.StudentDao"></property>
+        <!--采用拦截的名称-->
+        <property name="interceptorNames" value="MyAdvice"></property>
+        <!--强制使用cglib-->
+        <!--property name="optimize" value="true"></property-->
+    </bean>
+
 </beans>

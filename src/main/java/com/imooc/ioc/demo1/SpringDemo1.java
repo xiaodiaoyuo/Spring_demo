@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.awt.print.*;
+
 /**
  * Created by jany.nie on 2018/10/11.
  */
@@ -35,4 +37,5 @@ public class SpringDemo1 {
 
         System.out.println(result);
     }
+
 }
