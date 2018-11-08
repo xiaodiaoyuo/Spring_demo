@@ -3,6 +3,7 @@ package com.imooc.ioc.demo1;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.awt.print.*;
 
@@ -25,6 +26,15 @@ public class SpringDemo1 {
     public void demo2(){
         //使用spring工厂
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
+        //使用工厂获得类
+        userService us=(userService) applicationContext.getBean("userService");
+        us.sayHello();
+    }
+
+    @Test
+    public void demo4(){
+        //使用本地配置文件
+        ApplicationContext applicationContext=new FileSystemXmlApplicationContext("E:\\java_MOCDoc\\applicationContext.xml");
         //使用工厂获得类
         userService us=(userService) applicationContext.getBean("userService");
         us.sayHello();

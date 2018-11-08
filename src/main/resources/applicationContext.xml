@@ -31,4 +31,9 @@
         <!--property name="optimize" value="true"></property-->
     </bean>
 
+    <!--配置目标类-->
+    <bean id="Bean1" class="com.imooc.ioc.demo2.Bean1">    </bean>
+
+
+
 </beans>
