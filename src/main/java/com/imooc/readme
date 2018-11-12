@@ -9,3 +9,7 @@ demo2中无接口，使用CGlib生成代理
 
 2.bean
 property中optimize设置为true，强制使用CGLIB
+
+3.可以在参数中传入JoinPoint对象获取切点信息
+4.后置通知，通过returning获取返回值
+环绕通知：/如果不调用joinPoint.proceed()，那么目标被拦截
