@@ -7,7 +7,7 @@ public class ProductDao {
     }
     public String update(){
         System.out.println("更新========...");
-        int i=1/0;
+      //  int i=1/0;
         return "hello";
     }
     public void delete(){

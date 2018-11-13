@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.*;
 @Aspect
 public class MyAspectAnno {
     //前置通知
-    @Before(value="execution(* com.imooc.aspectJ.demo1.ProductDao.*(..)))")
+    @Before(value="myPointCut()")
     public void before(JoinPoint joinPoint){
         System.out.println("=========前置通知=================="+joinPoint);
     }
@@ -35,7 +35,10 @@ public class MyAspectAnno {
 
     //无论是否出现异常，最终执行
     @After(value="execution(* com.imooc.aspectJ.demo1.ProductDao.*(..)))")
-public void after(){
+    public void after(){
         System.out.println("最终通知============");
     }
+
+    @Pointcut(value="execution(* com.imooc.aspectJ.demo1.ProductDao.*(..)))")
+    private void myPointCut(){}
 }
