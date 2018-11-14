@@ -10,6 +10,8 @@ demo2中无接口，使用CGlib生成代理
 2.bean
 property中optimize设置为true，强制使用CGLIB
 
-3.可以在参数中传入JoinPoint对象获取切点信息
-4.后置通知，通过returning获取返回值
-环绕通知：/如果不调用joinPoint.proceed()，那么目标被拦截
+3.aspectJ方法说明
+3.1 使用bean和xml两种方法，分别对应demo1和demo2
+3.2 后置通知，通过returning获取返回值
+3.3 环绕通知：/如果不调用joinPoint.proceed()，那么目标被拦截,仅仅执行环绕通知里面的，前置后置不执行
+3.4 前置和环绕同时存在时，先执行前置

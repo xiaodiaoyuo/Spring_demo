@@ -15,7 +15,7 @@ public class CustomerDaoImp implements CustomerDao {
     }
 
     public void find() {
-        int i=1/0;
+       // int i=1/0;
         System.out.println("find================");
     }
 
